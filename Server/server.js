@@ -1,11 +1,8 @@
 const express = require("express");
 const app = express();
-const router = require("./router/auth-router");
-app.use("/api/auth", router);
+const router = require("./router/auth-router.js");
 
-app.get("/", (req, res) => {
-  res.status(200).send("hello rimi");
-});
+app.use("/api/auth", router);
 
 const PORT = 5000;
 app.listen(PORT, () => {
